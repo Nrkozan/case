@@ -14,7 +14,8 @@ Merhaba, ben Bilge Ozan Per. Bu projede, ürün bilgilerini MySQL veritabanına 
 ## Kurulum
 
 1. **Projeyi İndirin veya Klonlayın:** Projeyi GitHub'dan indirin veya aşağıdaki komutu kullanarak klonlayın:
+2. Sql Dosyasyı Zip için de ve path de bulunuyor
 
 ```bash
-git clone https://github.com/bilgeozanper/urun-socket-uygulamasi.git
+git clone https://github.com/Nrkozan/case.git)https://github.com/Nrkozan/case.git
 cd urun-socket-uygulamasi
