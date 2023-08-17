@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ürün Listesi</title>
+  <!-- Bootstrap CSS ekle -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .table-xxs td, .table-xxs th {
+      padding: .015rem;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Ürün Listesi</h1>
+  
+   
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="mb-3">
+          <label for="file" class="form-label">JSON Dosyası ile Ürün Ekleme</label>
+          <div class="d-flex flex-column">
+            <div class="">
+              <input class="form-control " type="file" id="file" name="file">
+            </div>
+            <div class="">
+              <button class="btn btn-primary mt-2" id="btnUpload">Yükle</button>
+            </div>
+            <div class="">
+              <button class="btn btn-danger mt-2" id="btnDeleteAll">Tümünü Sil</button>
+            </div>
+            <div class="mt-2">
+            <div>
+              <span>
+                Ürün Beden Getir
+              </span>
+            </div>
+              <button id="" data-size="X" class="btn btn-secondary getSize" >X</button>
+              <button  data-size="M"  class="btn btn-secondary getSize" >M</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+
+        <div>
+          <span>Filter Products :</span>
+    
+        </div>
+
+        <table class="table table-xxs" id="productTable">
+          <thead>
+            <tr>
+             
+              <th>Ürün Adı</th>
+              <th>Fiyat</th>
+            </tr>
+          </thead>
+          <tbody id="productTableBody">
+            <% products.forEach(function(product) { %>
+              <tr data-id="<%= product.id %>">
+            
+                <td><%= product.name %></td>
+                <td><%= product.price %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+   
+  </div>
+
+  <!-- Axios ve Socket.IO CDN ekle -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/product-client.js"></script>
+
+</body>
+</html>
